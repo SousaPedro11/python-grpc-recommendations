@@ -1,10 +1,11 @@
-from config import config
 import os
-from flask import Flask, render_template
-import grpc
-from recommendations.recommendations_pb2 import BookCategory, RecommendationRequest
 
-from recommendations.recommendations_pb2_grpc import RecommendationsStub
+import grpc
+from flask import Flask, render_template
+
+from marketplace.recommendations_pb2 import BookCategory, RecommendationRequest
+from marketplace.recommendations_pb2_grpc import RecommendationsStub
+from .config import config
 
 
 def create_app(config_name: str = "dev") -> Flask:
