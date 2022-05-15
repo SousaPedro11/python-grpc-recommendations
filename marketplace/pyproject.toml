@@ -1,17 +1,19 @@
 [tool.poetry]
+authors = ["Pedro Sousa <ppls2106@gmail.com>"]
+description = ""
 name = "marketplace"
 version = "0.1.0"
-description = ""
-authors = ["Pedro Sousa <ppls2106@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
 Flask = "^2.1.2"
 grpcio-tools = "^1.46.1"
+python = "^3.10"
+python-dotenv = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
+black = {version = "^22.3.0", allow-prereleases = true}
 pytest = "^7.1.2"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
